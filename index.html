@@ -600,17 +600,6 @@
     <script>
         // Store registered users
         const registeredUsers = JSON.parse(localStorage.getItem('registeredUsers') || '[]');
-        
-        // Initialize with existing users.json data
-        if (registeredUsers.length === 0) {
-            // Add existing user from users.json
-            registeredUsers.push({
-                name: "ABC",
-                email: "abc@gmail.com",
-                password: "1234"
-            });
-            saveRegisteredUsers();
-        }
 
         function saveRegisteredUsers() {
             localStorage.setItem('registeredUsers', JSON.stringify(registeredUsers));
